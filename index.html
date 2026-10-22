@@ -1,0 +1,1382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gemini Middle School | Best Hacker BRRRR</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #050a08;
+  color: white;
+  font-family: Consolas, monospace;
+}
+header {
+  text-align: center;
+  padding: 32px 12px;
+  background: linear-gradient(#10351b, #050a08);
+  border-bottom: 2px solid #39ff78;
+}
+header h1 {
+  color: #39ff78;
+  font-size: clamp(24px, 5vw, 44px);
+  text-shadow: 0 0 15px #39ff78;
+}
+header p { color: #b0ffc3; }
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding: 16px;
+  border-bottom: 1px solid #21452c;
+}
+nav a { color: #39ff78; text-decoration: none; }
+nav a:hover { color: white; }
+main { max-width: 1100px; margin: auto; padding: 22px; }
+.welcome {
+  background: #0d1710;
+  border: 1px solid #245b35;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+h2, .game-card h3 { color: #39ff78; }
+#search {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0 22px;
+  border: 1px solid #39ff78;
+  border-radius: 7px;
+  background: #0b120d;
+  color: white;
+  font: inherit;
+}
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
+.game-card {
+  background: #101a13;
+  border: 1px solid #245b35;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: .2s;
+}
+.game-card:hover {
+  transform: translateY(-4px);
+  border-color: #39ff78;
+  box-shadow: 0 0 16px #39ff7830;
+}
+.game-icon { font-size: 48px; }
+.game-card p {
+  color: #a7b9aa;
+  font-size: 13px;
+  line-height: 1.5;
+}
+button {
+  background: #39ff78;
+  color: #031007;
+  border: 0;
+  border-radius: 6px;
+  padding: 12px 18px;
+  font: bold 14px Consolas, monospace;
+  cursor: pointer;
+}
+button:hover { background: #a5ffbb; }
+footer {
+  text-align: center;
+  color: #77917d;
+  padding: 30px 15px;
+  margin-top: 40px;
+  border-top: 1px solid #21452c;
+}
+@media (max-width: 600px) {
+  main { padding: 14px; }
+  .games { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+}
+</style>
+</head>
+<body>
+<header>
+  <p>● SYSTEM ONLINE // ARCADE</p>
+  <h1>GEMINI MIDDLE SCHOOL</h1>
+  <p>☠ BEST HACKER BRRRR ☠</p>
+  <p>WELCOME TO THE GAME ZONE</p>
+</header>
+<nav>
+  <a href="#home">HOME</a>
+  <a href="#games">GAMES</a>
+</nav>
+<main id="home">
+  <section class="welcome">
+    <h2>WELCOME, HACKER. 😈</h2>
+    <p>Your arcade. Your games. Your rules.</p>
+    <p>Choose a game below and press PLAY NOW.</p>
+    <p>🎮 Games open in a new tab.</p>
+  </section>
+  <section id="games">
+    <h2>// GAME VAULT 🎮</h2>
+    <input id="search" type="search" placeholder="Search games..." aria-label="Search games">
+    <div class="games" id="gameList"></div>
+  </section>
+</main>
+<footer>
+  GEMINI MIDDLE SCHOOL © 2026
+  <br><br>
+  BUILT DIFFERENT. GAME DIFFERENT. BRRRR.
+</footer>
+<script>
+const games = [
+{
+name:"Slope 2",
+icon:"🟢",
+description:"Roll fast and avoid obstacles!",
+html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="https://cdn.jsdelivr.net/gh/fork-so-the-site-i-take-wont-be-deleted/bulbasaurchat.github.io@main/games/slope2/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slope 2</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="margin:0;width:100%;height:100%;background:#000">
+<div id="unity-container" class="unity-desktop" style="width:100%;height:100%">
+<canvas id="unity-canvas" style="width:100%;height:100%"></canvas>
+<div id="unity-loading-bar">
+<div id="unity-logo"></div>
+<div id="unity-progress-bar-empty"><div id="unity-progress-bar-full"></div></div>
+</div>
+<div id="unity-mobile-warning">WebGL builds may not work on mobile devices.</div>
+<button id="unity-fullscreen-button" style="display:none">Fullscreen</button>
+</div>
+<script>
+var loaderUrl="WebGL2Players v1.1.loader.js";
+var config={
+dataUrl:"WebGL2Players v1.1.data.unityweb",
+frameworkUrl:"WebGL2Players v1.1.framework.js.unityweb",
+codeUrl:"WebGL2Players v1.1.wasm.unityweb",
+streamingAssetsUrl:"StreamingAssets",
+companyName:"DefaultCompany",
+productName:"Slope 2 Player",
+productVersion:"1"
+};
+var container=document.querySelector("#unity-container");
+var canvas=document.querySelector("#unity-canvas");
+var loadingBar=document.querySelector("#unity-loading-bar");
+var progress=document.querySelector("#unity-progress-bar-full");
+var fullscreen=document.querySelector("#unity-fullscreen-button");
+var warning=document.querySelector("#unity-mobile-warning");
+if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
+container.className="unity-mobile";
+config.devicePixelRatio=1;
+warning.style.display="block";
+}
+loadingBar.style.display="block";
+var script=document.createElement("script");
+script.src=loaderUrl;
+script.onload=function(){
+createUnityInstance(canvas,config,function(p){
+progress.style.width=(100*p)+"%";
+}).then(function(instance){
+loadingBar.style.display="none";
+fullscreen.style.display="block";
+fullscreen.onclick=function(){instance.SetFullscreen(1);};
+}).catch(function(){
+loadingBar.textContent="Could not load Slope 2.";
+});
+};
+script.onerror=function(){loadingBar.textContent="Could not load game files.";};
+document.body.appendChild(script);
+<\/script>
+<script defer src="sg.min.js"><\/script>
+</body>
+</html>`
+},
+{
+name:"Geometry Dash Lite",
+icon:"🟦",
+description:"Jump, dodge obstacles, and beat the levels!",
+html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="https://rawcdn.githack.com/genizy/google-class/main/gdlite/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geometry Dash Lite</title>
+<style>
+html,body,#gameContainer{width:100%;height:100%;margin:0;overflow:hidden;background:#000}
+#gameContainer canvas{width:100%;height:100%;display:block}
+#loader{
+position:fixed;inset:0;display:flex;flex-direction:column;gap:20px;
+align-items:center;justify-content:center;
+background:linear-gradient(#000,#0066ff);color:white;
+font:bold 20px Consolas,monospace;z-index:10
+}
+#progress{width:min(70%,400px);height:12px;border:1px solid white;border-radius:10px;overflow:hidden}
+#progressFill{width:0;height:100%;background:#39ff78}
+</style>
+</head>
+<body>
+<div id="gameContainer"></div>
+<div id="loader">
+<img src="image/loading.png?v=1" alt="Loading Geometry Dash" style="max-width:80%;max-height:40vh">
+<div id="loadingText">LOADING GEOMETRY DASH...</div>
+<div id="progress"><div id="progressFill"></div></div>
+</div>
+<script src="Build/UnityLoader.js"><\/script>
+<script>
+const loader=document.getElementById("loader");
+const text=document.getElementById("loadingText");
+const fill=document.getElementById("progressFill");
+if(typeof UnityLoader!=="undefined"){
+try{
+UnityLoader.instantiate("gameContainer","Build/GeometryDashLite.json",{
+onProgress:function(instance,p){
+fill.style.width=(p*100)+"%";
+if(p>=1){
+text.textContent="READY!";
+setTimeout(function(){loader.style.display="none";},1500);
+}
+}
+});
+}catch(e){text.textContent="Could not start game. Refresh and try again.";}
+}else{text.textContent="Game loader failed. Check your connection.";}
+<\/script>
+</body>
+</html>`
+},
+{
+name:"Rooftop Snipers 2",
+icon:"🎯",
+description:"Battle your opponent in this rooftop showdown!",
+html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets/roof%20snipe%202/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rooftop Snipers 2</title>
+<script>
+window.config={
+loader:"unity",debug:false,maxRatio:16/9,minRatio:9/16,
+title:"Rooftop Snipers 2",
+thumbnail:"895b299e7e49558ca383b23648314860.png",
+numScreenshots:8,unityVersion:"2019.1.5f1",
+unityWebglBuildUrl:"Build/RooftopSnipers2.json",fileSize:27,
+cachedDecompressedFileSizes:{
+"RooftopSnipers2.data.unityweb":9563147,
+"RooftopSnipers2.wasm.code.unityweb":17055668,
+"RooftopSnipers2.wasm.framework.unityweb":475014
+}
+};
+<\/script>
+</head>
+<body style="margin:0;background:#000">
+<script src="sdkv3/master-loader.js"><\/script>
+</body>
+</html>`
+},
+
+  
+{
+name:"HTML Code Launcher",
+icon:"💻",
+description:"Paste HTML and launch your own page in a new tab!",
+html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Code Launcher</title>
+<style>
+*{box-sizing:border-box}
+body{background:#050a08;color:white;font-family:Consolas,monospace;margin:0;padding:20px;min-height:100vh}
+.container{max-width:850px;margin:30px auto;padding:25px;background:#101a13;border:1px solid #39ff78;border-radius:12px}
+h1{color:#39ff78;overflow-wrap:anywhere}
+p{color:#b0ffc3}
+textarea{display:block;width:100%;min-height:300px;padding:15px;background:#050a08;color:#39ff78;border:1px solid #245b35;border-radius:8px;font:14px Consolas,monospace}
+button{margin-top:15px;padding:13px 20px;background:#39ff78;color:#031007;border:0;border-radius:7px;font:bold 14px Consolas,monospace;cursor:pointer}
+.note{font-size:12px;color:#a7b9aa}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>// HTML CODE LAUNCHER 💻</h1>
+<p>Paste your HTML code below and launch it in a new tab.</p>
+<textarea id="htmlCodeInput" spellcheck="false"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Game</title>
+<style>html,body,iframe{margin:0;padding:0;width:100%;height:100%;border:0}</style>
+</head>
+<body><iframe src="https://smashkarts.io"></iframe></body>
+</html></textarea>
+<button id="launchButton">▶ LAUNCH IN NEW TAB</button>
+<p class="note">Only run HTML code you trust. External websites may block iframe embedding.</p>
+</div>
+<script>
+document.getElementById("launchButton").addEventListener("click",function(){
+const code=document.getElementById("htmlCodeInput").value;
+const win=window.open("about:blank","_blank");
+if(!win){alert("Popup blocked! Allow pop-ups and try again.");return;}
+try{
+win.document.open();
+win.document.write(code);
+win.document.close();
+}catch(e){
+win.close();
+alert("Could not launch this HTML.");
+}
+});
+<\/script>
+</body>
+</html>`
+},
+{
+name:"Ages of Conflict",
+icon:"🌍",
+description:"Create nations, watch AI countries battle, and shape the world!",
+html:`<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<base href="https://rawcdn.githack.com/genizy/assets/ff73bc4b150bcc3d18fe719bdb50e4338742e4f9/ages-of-conflict/">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ages of Conflict</title>
+<link rel="shortcut icon" href="TemplateData/favicon.ico">
+<link rel="stylesheet" href="TemplateData/style.css">
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#000}
+#unity-container{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+#unity-canvas{display:block;max-width:100%;max-height:100%;background:#000}
+#unity-warning{position:absolute;top:5px;left:5%;width:90%;z-index:20}
+</style>
+</head>
+<body>
+<div id="unity-container" class="unity-desktop">
+<canvas id="unity-canvas" width="1280" height="720"></canvas>
+<div id="unity-loading-bar">
+<div id="unity-logo"></div>
+<div id="unity-progress-bar-empty"><div id="unity-progress-bar-full"></div></div>
+</div>
+<div id="unity-warning"></div>
+<div id="unity-footer">
+<div id="unity-webgl-logo"></div>
+<div id="unity-fullscreen-button"></div>
+<div id="unity-build-title">Ages of Conflict</div>
+</div>
+</div>
+<script>
+const container=document.querySelector("#unity-container");
+const canvas=document.querySelector("#unity-canvas");
+const loadingBar=document.querySelector("#unity-loading-bar");
+const progressBarFull=document.querySelector("#unity-progress-bar-full");
+const fullscreenButton=document.querySelector("#unity-fullscreen-button");
+const warningBanner=document.querySelector("#unity-warning");
+
+function unityShowBanner(message,type){
+const div=document.createElement("div");
+div.textContent=message;
+div.style.padding="10px";
+if(type==="error"){
+div.style.background="red";
+div.style.color="white";
+}else{
+div.style.background="yellow";
+div.style.color="black";
+setTimeout(function(){
+if(div.parentNode===warningBanner)warningBanner.removeChild(div);
+warningBanner.style.display=warningBanner.children.length?"block":"none";
+},5000);
+}
+warningBanner.appendChild(div);
+warningBanner.style.display="block";
+}
+
+const buildUrl="Build";
+const loaderUrl=buildUrl+"/v1.04.2w.loader.js";
+const config={
+dataUrl:buildUrl+"/v1.04.2w.data.unityweb",
+frameworkUrl:buildUrl+"/v1.04.2w.framework.js.unityweb",
+codeUrl:buildUrl+"/v1.04.2w.wasm.unityweb",
+streamingAssetsUrl:"StreamingAssets",
+companyName:"JokuPelle",
+productName:"Ages of Conflict",
+productVersion:"1.04.2",
+showBanner:unityShowBanner
+};
+
+if(/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)){
+container.className="unity-mobile";
+canvas.style.width="100vw";
+canvas.style.height="100vh";
+config.devicePixelRatio=1;
+unityShowBanner("Mobile performance may vary.","warning");
+}else{
+canvas.style.width="min(1280px, 100vw)";
+canvas.style.height="min(720px, 56.25vw)";
+}
+
+loadingBar.style.display="block";
+const script=document.createElement("script");
+script.src=loaderUrl;
+script.onload=function(){
+createUnityInstance(canvas,config,function(progress){
+progressBarFull.style.width=(progress*100)+"%";
+}).then(function(unityInstance){
+loadingBar.style.display="none";
+if(fullscreenButton){
+fullscreenButton.onclick=function(){unityInstance.SetFullscreen(1);};
+}
+}).catch(function(error){
+console.error(error);
+unityShowBanner("Could not load Ages of Conflict. Try refreshing.","error");
+});
+};
+script.onerror=function(){
+unityShowBanner("Could not load the game loader. Check your connection.","error");
+};
+document.body.appendChild(script);
+<\/script>
+</body>
+</html>`
+},
+
+  
+{
+name:"Neon Rush 3D",
+icon:"🚀",
+description:"Dash through a neon world, dodge obstacles, and beat your high score!",
+html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Rush 3D</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{overflow:hidden;background:#0a0015;font-family:Arial,sans-serif}
+#gameCanvas{display:block;width:100vw;height:100vh}
+#ui{position:absolute;top:0;left:0;padding:24px;color:white;font-size:24px;text-shadow:0 0 10px #00ffff;pointer-events:none}
+#score{font-weight:bold;font-size:32px}
+#distance{font-size:20px;margin-top:10px}
+#gameOver{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:white;display:none;background:#000e;padding:30px;border-radius:20px;border:3px solid #00ffff;width:min(90%,460px)}
+#gameOver h1{font-size:40px;margin-bottom:20px;color:#ff00ff}
+#gameOver button{margin-top:20px;padding:15px 30px;font-size:20px;background:linear-gradient(135deg,#00ffff,#ff00ff);border:0;border-radius:10px;color:white;cursor:pointer}
+#instructions{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:white;font-size:14px;text-align:center;width:95%}
+#touchControls{position:absolute;bottom:60px;left:0;right:0;display:flex;justify-content:space-between;padding:0 22px;pointer-events:none}
+#touchControls button{pointer-events:auto;width:60px;height:55px;background:#16002dcc;color:white;border:1px solid #00ffff;border-radius:12px;font-size:24px}
+@media(hover:hover) and (pointer:fine){#touchControls{display:none}}
+</style>
+</head>
+<body>
+<canvas id="gameCanvas"></canvas>
+<div id="ui"><div id="score">Score: 0</div><div id="distance">Distance: 0m</div></div>
+<div id="gameOver">
+<h1>GAME OVER</h1>
+<div id="finalScore" style="font-size:22px;margin:20px 0"></div>
+<button onclick="restartGame()">PLAY AGAIN</button>
+</div>
+<div id="touchControls">
+<button id="leftBtn">◀</button>
+<button id="jumpBtn">⬆</button>
+<button id="rightBtn">▶</button>
+</div>
+<div id="instructions">SPACE / ⬆ Jump · A/D or ←/→ Move · Dodge the neon obstacles!</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>
+<script>
+let scene,camera,renderer,player;
+let ground=[],obstacles=[];
+let score=0,distance=0,gameActive=true;
+let playerLane=1,isJumping=false,jumpVelocity=0;
+let spawnTimer=0,lastTime=0;
+const gravity=-36,jumpPower=15,lanes=[-4,0,4],baseSpeed=18;
+
+function init(){
+scene=new THREE.Scene();
+scene.background=new THREE.Color(0x0a0015);
+scene.fog=new THREE.Fog(0x0a0015,35,125);
+camera=new THREE.PerspectiveCamera(70,innerWidth/innerHeight,.1,300);
+camera.position.set(0,8,12);
+camera.lookAt(0,1,-12);
+renderer=new THREE.WebGLRenderer({canvas:document.getElementById("gameCanvas"),antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth,innerHeight);
+scene.add(new THREE.AmbientLight(0xffffff,.7));
+const light=new THREE.PointLight(0x00ffff,2,100);
+light.position.set(0,10,-15);
+scene.add(light);
+createPlayer();
+createGround();
+addEventListener("keydown",onKeyDown);
+addEventListener("resize",onResize);
+document.getElementById("leftBtn").addEventListener("pointerdown",()=>moveLane(-1));
+document.getElementById("rightBtn").addEventListener("pointerdown",()=>moveLane(1));
+document.getElementById("jumpBtn").addEventListener("pointerdown",jump);
+requestAnimationFrame(animate);
+}
+
+function createPlayer(){
+const geometry=new THREE.BoxGeometry(1.1,1.8,1.1);
+const material=new THREE.MeshPhongMaterial({color:0x00ffff,emissive:0x00ffff,emissiveIntensity:.65});
+player=new THREE.Mesh(geometry,material);
+player.position.set(lanes[playerLane],1,0);
+scene.add(player);
+const glow=new THREE.PointLight(0x00ffff,1.5,8);
+glow.position.set(0,1,0);
+player.add(glow);
+}
+
+function createGround(){
+const floorMat=new THREE.MeshPhongMaterial({color:0x160027,emissive:0x320044,emissiveIntensity:.35,side:THREE.DoubleSide});
+for(let i=0;i<50;i++){
+const plane=new THREE.Mesh(new THREE.PlaneGeometry(15,3),floorMat);
+plane.rotation.x=-Math.PI/2;
+plane.position.set(0,0,-i*3);
+scene.add(plane);
+ground.push(plane);
+}
+for(const x of [-6,-2,2,6]){
+const rail=new THREE.Mesh(new THREE.BoxGeometry(.045,.035,150),new THREE.MeshBasicMaterial({color:0xff00ff}));
+rail.position.set(x,.04,-60);
+scene.add(rail);
+}
+}
+
+function createObstacle(z){
+const lane=Math.floor(Math.random()*3);
+const height=Math.random()>.5?2:3;
+const obstacle=new THREE.Mesh(
+new THREE.BoxGeometry(1.5,height,1.5),
+new THREE.MeshPhongMaterial({color:0xff00ff,emissive:0xff00ff,emissiveIntensity:.65})
+);
+obstacle.position.set(lanes[lane],height/2,z);
+obstacle.userData.passed=false;
+scene.add(obstacle);
+obstacles.push(obstacle);
+}
+
+function moveLane(direction){
+if(gameActive)playerLane=Math.max(0,Math.min(2,playerLane+direction));
+}
+function jump(){
+if(gameActive&&!isJumping){isJumping=true;jumpVelocity=jumpPower;}
+}
+function onKeyDown(e){
+if(["ArrowLeft","ArrowRight","ArrowUp","Space"].includes(e.code))e.preventDefault();
+if(e.repeat)return;
+if(["Space","ArrowUp","KeyW"].includes(e.code))jump();
+if(["ArrowLeft","KeyA"].includes(e.code))moveLane(-1);
+if(["ArrowRight","KeyD"].includes(e.code))moveLane(1);
+}
+
+function updatePlayer(dt){
+player.position.x+=(lanes[playerLane]-player.position.x)*Math.min(1,12*dt);
+if(isJumping){
+jumpVelocity+=gravity*dt;
+player.position.y+=jumpVelocity*dt;
+if(player.position.y<=1){
+player.position.y=1;isJumping=false;jumpVelocity=0;
+}
+}
+player.rotation.y+=dt*1.5;
+}
+function updateGround(dt,speed){
+ground.forEach(plane=>{
+plane.position.z+=speed*dt;
+if(plane.position.z>8)plane.position.z-=150;
+});
+}
+function checkCollision(a,b){
+return Math.abs(a.position.x-b.position.x)<1.2&&
+Math.abs(a.position.z-b.position.z)<1.2&&
+Math.abs(a.position.y-b.position.y)<b.geometry.parameters.height/2+.65;
+}
+function updateObstacles(dt,speed){
+spawnTimer+=dt;
+if(spawnTimer>Math.max(.48,1.05-distance/400)){
+createObstacle(-85);spawnTimer=0;
+}
+for(let i=obstacles.length-1;i>=0;i--){
+const obs=obstacles[i];
+obs.position.z+=speed*dt;
+obs.rotation.y+=dt*.8;
+if(obs.position.z>8){
+if(!obs.userData.passed){obs.userData.passed=true;score+=10;}
+scene.remove(obs);obs.geometry.dispose();obs.material.dispose();
+obstacles.splice(i,1);continue;
+}
+if(checkCollision(player,obs)){gameOver();return;}
+}
+}
+function updateScore(dt,speed){
+distance+=speed*dt;
+document.getElementById("score").textContent="Score: "+score;
+document.getElementById("distance").textContent="Distance: "+Math.floor(distance)+"m";
+}
+function gameOver(){
+if(!gameActive)return;
+gameActive=false;
+document.getElementById("gameOver").style.display="block";
+document.getElementById("finalScore").textContent="Score: "+score+" | Distance: "+Math.floor(distance)+"m";
+}
+function restartGame(){
+obstacles.forEach(obs=>{scene.remove(obs);obs.geometry.dispose();obs.material.dispose();});
+obstacles=[];score=0;distance=0;spawnTimer=0;playerLane=1;
+player.position.set(0,1,0);player.rotation.set(0,0,0);
+isJumping=false;jumpVelocity=0;gameActive=true;lastTime=0;
+document.getElementById("score").textContent="Score: 0";
+document.getElementById("distance").textContent="Distance: 0m";
+document.getElementById("gameOver").style.display="none";
+}
+function animate(time=0){
+requestAnimationFrame(animate);
+const dt=Math.min((time-lastTime)/1000||0,.05);
+lastTime=time;
+if(gameActive){
+const speed=baseSpeed+Math.min(distance*.015,12);
+updatePlayer(dt);updateGround(dt,speed);updateObstacles(dt,speed);updateScore(dt,speed);
+}
+renderer.render(scene,camera);
+}
+function onResize(){
+camera.aspect=innerWidth/innerHeight;
+camera.updateProjectionMatrix();
+renderer.setSize(innerWidth,innerHeight);
+}
+init();
+<\/script>
+</body>
+</html>`
+},
+{
+name:"Stone Grass: Mowing Simulator",
+icon:"🌱",
+description:"Drive your mower and cut the grass in this 3D simulator!",
+html:`<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<base href="https://cdn.jsdelivr.net/gh/bubbls/UGS-Assets@5765230aac4c0072a5b1021eab4a6a4b9df597f9/stone-grass-mowing-simulator/">
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Stone Grass: Mowing Simulator</title>
+<style>
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#fff}
+#unity-canvas{position:fixed;top:0;left:0;width:100%;height:100%;outline:none}
+#loading-text{position:fixed;top:20px;left:0;width:100%;text-align:center;color:#111;font:bold 24px Arial,sans-serif;z-index:10;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="loading-text">LOADING...</div>
+<canvas id="unity-canvas" tabindex="-1"></canvas>
+<script>
+const SPLIT_MAP={"8e12edaf08bc00cba646a7df97480baf.wasm":null};
+
+async function mergeParts(baseUrl){
+const parts=[];
+for(let i=1;i<=99;i++){
+const testUrl=baseUrl+".part"+i;
+try{
+const head=await fetch(testUrl,{method:"HEAD"});
+if(!head.ok)break;
+parts.push(testUrl);
+}catch(error){break;}
+}
+if(parts.length===0)return baseUrl;
+const buffers=await Promise.all(parts.map(async url=>{
+const response=await fetch(url);
+if(!response.ok)throw new Error("Failed to load game part: "+url);
+return new Uint8Array(await response.arrayBuffer());
+}));
+const total=buffers.reduce((sum,b)=>sum+b.length,0);
+const merged=new Uint8Array(total);
+let offset=0;
+for(const buffer of buffers){merged.set(buffer,offset);offset+=buffer.length;}
+return URL.createObjectURL(new Blob([merged]));
+}
+
+async function preMergeAll(){
+const map={};
+const files=Object.keys(SPLIT_MAP);
+const loadingText=document.getElementById("loading-text");
+let done=0;
+for(const file of files){
+map[file]=await mergeParts("Build/"+file);
+done++;
+loadingText.textContent="LOADING... "+Math.floor(done/files.length*100)+"%";
+}
+return map;
+}
+
+(async()=>{
+const loadingText=document.getElementById("loading-text");
+try{
+const mergedMap=await preMergeAll();
+window.SPLIT_MAP=mergedMap;
+const origFetch=window.fetch.bind(window);
+window.fetch=async function(resource,options){
+if(typeof resource==="string"){
+const key=resource.split("/").pop();
+if(mergedMap[key])return origFetch(mergedMap[key],options);
+if(resource.includes("StreamingAssets")){
+const base=document.querySelector("base").href;
+const file=resource.split("/StreamingAssets/")[1]||"";
+return origFetch(base+"StreamingAssets/"+file,options);
+}
+}
+return origFetch(resource,options);
+};
+
+const OrigXHR=window.XMLHttpRequest;
+window.XMLHttpRequest=function(){
+const xhr=new OrigXHR();
+const origOpen=xhr.open;
+xhr.open=function(method,url,...rest){
+const key=String(url).split("/").pop();
+origOpen.call(xhr,method,mergedMap[key]||url,...rest);
+};
+return xhr;
+};
+
+const canvas=document.getElementById("unity-canvas");
+const config={
+dataUrl:"Build/5339d669eb849446a68aba9a48d61098.data",
+frameworkUrl:"Build/9f98a295b940d80834f1bfc1792d2663.framework.js",
+codeUrl:"Build/8e12edaf08bc00cba646a7df97480baf.wasm",
+streamingAssetsUrl:"StreamingAssets",
+companyName:"Stone Grass: Mowing Simulator",
+productName:"Stone Grass: Mowing Simulator",
+productVersion:"1.0.0"
+};
+const script=document.createElement("script");
+script.src="Build/e40682cd4a2e8826aa72fb3216daf773.loader.js";
+script.onload=()=>{
+if(typeof createUnityInstance!=="function"){
+loadingText.textContent="Game loader unavailable.";
+return;
+}
+createUnityInstance(canvas,config,progress=>{
+loadingText.textContent="LOADING... "+Math.round(progress*100)+"%";
+}).then(instance=>{
+window.gameInstance=instance;
+loadingText.style.display="none";
+}).catch(error=>{
+console.error(error);
+loadingText.textContent="Could not load game. Check your connection and refresh.";
+});
+};
+script.onerror=()=>{
+loadingText.textContent="Could not load Unity loader. Check your connection.";
+};
+document.body.appendChild(script);
+}catch(error){
+console.error(error);
+loadingText.textContent="Could not prepare game files. Please refresh.";
+}
+})();
+
+function resizeCanvas(){
+const canvas=document.getElementById("unity-canvas");
+canvas.width=Math.floor(window.innerWidth*Math.min(window.devicePixelRatio||1,2));
+canvas.height=Math.floor(window.innerHeight*Math.min(window.devicePixelRatio||1,2));
+canvas.style.width=window.innerWidth+"px";
+canvas.style.height=window.innerHeight+"px";
+}
+window.addEventListener("resize",resizeCanvas);
+resizeCanvas();
+<\/script>
+</body>
+</html>`
+},
+{
+name: "Moto 3",
+icon: "🏍",
+description: "Drive like a pro to win every level",
+html: `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Rabbibo/moto@35b09901c725d990145f7b305cbcb42ddcee4782/assets/css/app.css" type="text/css">
+</head>
+<body>
+    <div id="content"></div>
+    <div id="orientation"></div>
+    <div id="loader">Loading ...</div>
+
+    <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"><\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/nape.min.js"><\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/jquery-3.1.1.min.js"><\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/easeljs-0.8.2.combined.js"><\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/bluebird.min.js"><\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bobydob/JSEngine@0e96212fb7b2e7aa0a310d3ebe3a8ab01a114b4b/build/m3m/m3m.min.js"><\/script>
+</body>
+</html>`
+},
+{
+name:"8 Ball Pool",
+icon:"🎱",
+description:"Pool game!",
+html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\/script>
+    <object width="100%" height="100%">
+        <param name="movie" value="https://cdn.jsdelivr.net/gh/illusionTBA/React-Ruffle@f37551ff7c55cc61002445a0f1e334742f6832e4/public/swf/8BallPool.swf">
+        <embed src="https://cdn.jsdelivr.net/gh/illusionTBA/React-Ruffle@f37551ff7c55cc61002445a0f1e334742f6832e4/public/swf/8BallPool.swf" width="100%" height="100%">
+    </object>
+</body>
+</html>`
+},
+{
+name:"Basketball Stars",
+icon:"🏀",
+description:"Play Basketball Stars!",
+html:`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/css/app.css" type="text/css">
+</head>
+<body>
+    <div id="content"></div>
+    <div id="orientation"></div>
+    <div id="loader">Loading ...</div>
+    <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/nape.min.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/jquery-3.1.1.min.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/easeljs-0.8.2.combined.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/bluebird.min.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/phaser.min.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/phaser-cachebuster.min.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/phaser-super-storage.min.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/assets/lib/dragonBones.min.js"><\/script>
+    <script type="text/javascript" src="https://36043189-480959866522093217.preview.editmysite.com/uploads/b/139890129-743801889220072865/files/bs.min.js"><\/script>
+</body>
+</html>`
+},
+
+  
+  
+];
+
+// GAME LIST AND SEARCH
+const gameList = document.getElementById("gameList");
+const search = document.getElementById("search");
+
+function openGame(game) {
+  const newTab = window.open("about:blank", "_blank");
+
+  if (!newTab) {
+    alert("The new tab was blocked. Allow pop-ups for this website and try again.");
+    return;
+  }
+
+  try {
+    newTab.document.open();
+    newTab.document.write(game.html);
+    newTab.document.close();
+  } catch (error) {
+    newTab.close();
+    alert("Could not open this game. Please try again.");
+  }
+}
+
+function renderGames() {
+  const query = search.value.toLowerCase().trim();
+  gameList.replaceChildren();
+
+  const results = games.filter(game =>
+    game.name.toLowerCase().includes(query) ||
+    game.description.toLowerCase().includes(query)
+  );
+
+  if (!results.length) {
+    gameList.textContent = "No games found!";
+    return;
+  }
+
+  results.forEach(game => {
+    const card = document.createElement("article");
+    card.className = "game-card";
+
+    const icon = document.createElement("div");
+    icon.className = "game-icon";
+    icon.textContent = game.icon || "🎮";
+
+    const title = document.createElement("h3");
+    title.textContent = game.name;
+
+    const description = document.createElement("p");
+    description.textContent = game.description;
+
+    const button = document.createElement("button");
+    button.textContent = "▶ PLAY NOW";
+    button.addEventListener("click", () => openGame(game));
+
+    card.append(icon, title, description, button);
+    gameList.appendChild(card);
+  });
+}
+
+search.addEventListener("input", renderGames);
+renderGames();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Code Launcher</title>
+
+<style>
+    #htmlNoteWidget #hnwButton {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 2147483647;
+        padding: 6px 14px;
+        background: linear-gradient(90deg, #000000, #064d20 45%, #32cd65);
+        color: #b6ffbf;
+        border: 1px solid #39ff70;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor: pointer;
+        box-shadow: 0 0 6px #087d32;
+    }
+
+    #htmlNoteWidget #hnwButton:hover {
+        box-shadow: 0 0 12px #39ff70;
+    }
+
+    #htmlNoteWidget #hnwPanel {
+        display: none;
+        position: fixed;
+        top: 48px;
+        left: 10px;
+        width: 350px;
+        max-width: calc(100vw - 40px);
+        height: 390px;
+        box-sizing: border-box;
+        padding: 15px;
+        background: #101510;
+        color: #caffd4;
+        border: 1px solid #32cd65;
+        border-radius: 8px;
+        z-index: 2147483647;
+        box-shadow: 0 0 15px #064d20;
+        overflow: auto;
+        font-family: Arial, sans-serif;
+    }
+
+    #htmlNoteWidget #hnwTitle {
+        color: #39ff70;
+        font-size: 16px;
+        margin: 12px 0;
+    }
+
+    #htmlNoteWidget #hnwClose {
+        float: right;
+        background: #071b0c;
+        color: #65ff86;
+        border: 1px solid #32cd65;
+        border-radius: 4px;
+        padding: 4px 8px;
+        cursor: pointer;
+    }
+
+    #htmlNoteWidget #hnwCode {
+        display: block;
+        width: 100%;
+        height: 285px;
+        box-sizing: border-box;
+        resize: vertical;
+        background: #080c08;
+        color: #aaffb8;
+        border: 1px solid #245c32;
+        border-radius: 5px;
+        padding: 10px;
+        font: 12px/1.5 monospace;
+        white-space: pre;
+        overflow: auto;
+        tab-size: 4;
+    }
+
+    #htmlNoteWidget #hnwCode:focus {
+        outline: 1px solid #39ff70;
+    }
+</style>
+</head>
+
+<body>
+
+<div id="htmlNoteWidget">
+
+    <button id="hnwButton" type="button">Click Me</button>
+
+    <div id="hnwPanel">
+        <button id="hnwClose" type="button">Close ✕</button>
+
+        <h3 id="hnwTitle">
+            Code's To Use In The HTML Code Launcher
+        </h3>
+
+        <textarea
+            id="hnwCode"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            placeholder="Paste your HTML code here..."
+        ></textarea>
+    </div>
+
+</div>
+
+<script>
+(function () {
+    function initHtmlNoteWidget() {
+        const widget = document.getElementById("htmlNoteWidget");
+
+        if (!widget || widget.dataset.initialized === "true") {
+            return;
+        }
+
+        const button = widget.querySelector("#hnwButton");
+        const panel = widget.querySelector("#hnwPanel");
+        const close = widget.querySelector("#hnwClose");
+        const notes = widget.querySelector("#hnwCode");
+
+        if (!button || !panel || !close || !notes) {
+            return;
+        }
+
+        widget.dataset.initialized = "true";
+
+        // Store the code examples as plain text.
+        notes.value = `USE THESE CODES IN THE HTML LAUNCHER
+
+1. MOTO X3M CODE:
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Rabbibo/moto@35b09901c725d990145f7b305cbcb42ddcee4782/assets/css/app.css" type="text/css">
+</head>
+<body>
+    <div id="content"></div>
+    <div id="orientation"></div>
+    <div id="loader">Loading ...</div>
+    <script type="text/javascript" src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"><\\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/nape.min.js"><\\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/jquery-3.1.1.min.js"><\\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/easeljs-0.8.2.combined.js"><\\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Stypical/lacklack@0959ed15fc96078cbb053e4e3c259a62b3e9e296/motox3m/assets/lib/bluebird.min.js"><\\/script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bobydob/JSEngine@0e96212fb7b2e7aa0a310d3ebe3a8ab01a114b4b/build/m3m/m3m.min.js"><\\/script>
+</body>
+</html>
+
+
+2. 8 BALL POOL CODE:
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/u-cvlassrom-y/google@main/ruffle.js"><\\/script>
+    <object width="100%" height="100%">
+        <param name="movie" value="https://cdn.jsdelivr.net/gh/illusionTBA/React-Ruffle@f37551ff7c55cc61002445a0f1e334742f6832e4/public/swf/8BallPool.swf">
+        <embed src="https://cdn.jsdelivr.net/gh/illusionTBA/React-Ruffle@f37551ff7c55cc61002445a0f1e334742f6832e4/public/swf/8BallPool.swf" width="100%" height="100%">
+    </object>
+</body>
+</html>
+
+`;
+
+        // Open the panel.
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            panel.style.display = "block";
+        });
+
+        // Close the panel.
+        close.addEventListener("click", function (event) {
+            event.preventDefault();
+            panel.style.display = "none";
+        });
+    }
+
+    // Initialize whether the script loads before or after the HTML.
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            initHtmlNoteWidget
+        );
+    } else {
+        initHtmlNoteWidget();
+    }
+})();
+</script>
+
+</body>
+</html>
+
+
+<!-- ==========================================
+     GEMINI MIDDLE SCHOOL — HTML FILE VAULT
+     Add this section inside your existing <main>
+     ========================================== -->
+
+<style>
+#fileLauncher {
+  margin-top: 30px;
+  padding: 20px;
+  background: #0d1710;
+  color: white;
+  border: 1px solid #245b35;
+  border-radius: 12px;
+  font-family: Consolas, monospace;
+}
+
+#fileLauncher h2 {
+  color: #39ff78;
+}
+
+#fileLauncher p {
+  color: #b0ffc3;
+  overflow-wrap: anywhere;
+}
+
+#htmlFileUpload {
+  display: block;
+  width: 100%;
+  margin: 18px 0;
+  padding: 12px;
+  background: #080f0a;
+  color: white;
+  border: 1px solid #39ff78;
+  border-radius: 7px;
+  font: inherit;
+}
+
+#uploadedFileList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.uploaded-file-card {
+  min-width: 0;
+  padding: 16px;
+  background: #101a13;
+  border: 1px solid #245b35;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.uploaded-file-card:hover {
+  border-color: #39ff78;
+  box-shadow: 0 0 12px #39ff7830;
+}
+
+.uploaded-file-card h3 {
+  color: #39ff78;
+  font-size: 16px;
+}
+
+.uploaded-file-card p {
+  color: #a7b9aa;
+  font-size: 12px;
+}
+
+#fileLauncher button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  background: #39ff78;
+  color: #031007;
+  border: none;
+  border-radius: 6px;
+  font: bold 13px Consolas, monospace;
+  cursor: pointer;
+}
+
+#fileLauncher button:hover {
+  background: #a5ffbb;
+}
+
+#fileLauncher .remove-file {
+  background: #26352a;
+  color: white;
+  border: 1px solid #52745a;
+}
+</style>
+
+<section id="fileLauncher">
+  <h2>// HTML FILE VAULT 📂</h2>
+
+  <p>
+    Upload HTML files from your device and open them
+    in a new about:blank tab.
+  </p>
+
+  <input
+    id="htmlFileUpload"
+    type="file"
+    accept=".html,.htm,text/html"
+    multiple
+    aria-label="Choose HTML files"
+  >
+
+  <p id="fileStatus" aria-live="polite">
+    No files selected.
+  </p>
+
+  <div id="uploadedFileList"></div>
+</section>
+
+<script>
+(function () {
+  const picker = document.getElementById("htmlFileUpload");
+  const list = document.getElementById("uploadedFileList");
+  const status = document.getElementById("fileStatus");
+
+  if (!picker || !list || !status) return;
+
+  let files = [];
+
+  function formatSize(bytes) {
+    if (bytes < 1024) return bytes + " bytes";
+    if (bytes < 1048576) {
+      return (bytes / 1024).toFixed(1) + " KB";
+    }
+    return (bytes / 1048576).toFixed(2) + " MB";
+  }
+
+  function renderFiles() {
+    list.replaceChildren();
+
+    status.textContent = files.length
+      ? files.length + (files.length === 1
+          ? " HTML file ready."
+          : " HTML files ready.")
+      : "No files selected.";
+
+    files.forEach(function (file, index) {
+      const card = document.createElement("article");
+      card.className = "uploaded-file-card";
+
+      const title = document.createElement("h3");
+      title.textContent = "📄 " + file.name;
+
+      const size = document.createElement("p");
+      size.textContent = formatSize(file.size);
+
+      const open = document.createElement("button");
+      open.type = "button";
+      open.textContent = "▶ OPEN IN NEW TAB";
+
+      open.addEventListener("click", function () {
+        launchFile(file);
+      });
+
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.className = "remove-file";
+      remove.textContent = "✕ REMOVE FILE";
+
+      remove.addEventListener("click", function () {
+        files.splice(index, 1);
+        renderFiles();
+      });
+
+      card.append(title, size, open, remove);
+      list.appendChild(card);
+    });
+  }
+
+  picker.addEventListener("change", function () {
+    const selected = Array.from(picker.files || []);
+
+    files = selected.filter(function (file) {
+      return /\.(html|htm)$/i.test(file.name);
+    });
+
+    renderFiles();
+
+    if (files.length !== selected.length) {
+      status.textContent += " Non-HTML files were ignored.";
+    }
+  });
+
+  async function launchFile(file) {
+    // Open synchronously from the user's click to reduce
+    // the chance of the browser blocking the new tab.
+    const tab = window.open("about:blank", "_blank");
+
+    if (!tab) {
+      alert("Pop-up blocked. Allow pop-ups and try again.");
+      return;
+    }
+
+    // Prevent the opened page from controlling this page.
+    try {
+      tab.opener = null;
+    } catch (_) {}
+
+    try {
+      tab.document.title = file.name;
+      tab.document.body.textContent = "Loading " + file.name + "...";
+
+      const html = await file.text();
+
+      if (tab.closed) return;
+
+      tab.document.open();
+      tab.document.write(html);
+      tab.document.close();
+    } catch (error) {
+      if (!tab.closed) {
+        tab.document.body.textContent =
+          "Could not open this HTML file.";
+      }
+
+      console.error(error);
+    }
+  }
+
+  renderFiles();
+})();
+</script>
+
+
